@@ -1,3 +1,4 @@
+
 <x-app-layout>
     <!DOCTYPE html>
     <html lang="en">
@@ -15,20 +16,39 @@
             <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
             <!-- Core theme CSS (includes Bootstrap)-->
             <link href="../../../landing-page/css/styles.css" rel="stylesheet" />
+
+            <style>
+                .place::placeholder {
+                  color: #ff7300;
+                }
+                .please{
+                    color: #ffffff;
+                    margin-top: -100px;
+                    font-style: italic;
+                }
+                span{
+                    font-weight: bold;
+                    color: #ff7300;
+                }
+            </style>                
         </head>
         <body id="page-top">
-            <!-- Masthead-->
             <header class="masthead">
                 <div class="container px-4 px-lg-5 h-100">
                     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                        <div class="col-lg-8 align-self-end">
-                            <h1 class="text-white font-weight-bold">WELCOME, PROFESSIANS!</h1>
-                            <hr class="divider" />
-                        </div>
-                        <div class="col-lg-8 align-self-baseline">
-                            <p class="you-are mb-5">You are, {{ $user->name }}!</p>
-                            <a class="btn btn-primary btn-xl" href="{{ route('exam/courses') }}">CCS Exam Master</a>
-                        </div>
+                        <form method="POST" action="{{ $actionRoute }}">
+                            @csrf
+                            <h1 class="please">Enter <span>Secret Key</span> for <span>{{ ucfirst($subject) }}</span></h1>
+                            <input class="place" style="color: #ff7300; padding: 20px;" type="password" name="password" placeholder="Enter password">
+                            <button class="btn btn-outline-primary" style="color: white; padding: 20px;" type="submit">OK</button>
+                            @error('password')
+                                <div style="color: red">{{ $message }}</div>
+                            @enderror
+                            <br/>
+                            <br/>
+                            <br/>
+                            <a href="/exam/courses" class="btn btn-primary">Choose another subject</a>
+                        </form>
                     </div>
                 </div>
             </header>

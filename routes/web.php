@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExamController;
+use App\Http\Controllers\SecretPageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -52,14 +53,22 @@ Route::get('/exam/courses', function () {
     return view('exam/courses');
 })->name('exam/courses');
 
-Route::get('/exam/subject/elective2', function () {return view('exam/subject/elective2');})->name('exam/subject/elective2');
-Route::get('/exam/subject/elective4', function () {return view('exam/subject/elective4');})->name('exam/subject/elective4');
-Route::get('/exam/subject/net101', function () {return view('exam/subject/net101');})->name('exam/subject/net101');
-Route::get('/exam/subject/net102', function () {return view('exam/subject/net102');})->name('exam/subject/net102');
-Route::get('/exam/subject/ipt101', function () {return view('exam/subject/ipt101');})->name('exam/subject/ipt101');
-Route::get('/exam/subject/sia', function () {return view('exam/subject/sia');})->name('exam/subject/sia');
-Route::get('/exam/subject/ias', function () {return view('exam/subject/ias');})->name('exam/subject/ias');
 
+Route::middleware(['auth', 'check.password'])->group(function () {
+        
+    Route::get('/exam-page/{subject}', [SecretPageController::class, 'showForm'])->name('exam.form');
+    Route::post('/exam-page/{subject}', [SecretPageController::class, 'checkPassword'])->name('exam.check');
+
+    Route::get('/subject/{subject}', [SecretPageController::class, 'showSubject'])->name('subject.view');
+    
+    Route::get('/subject/elective2', [SecretPageController::class, 'elective2'])->name('subject/elective2');
+    Route::get('/subject/elective4', [SecretPageController::class,'elective4'])->name('subject/elective4');
+    Route::get('/subject/net101', [SecretPageController::class,'net101'])->name('subject/net101');
+    Route::get('/subject/net102', [SecretPageController::class,'net102'])->name('subject/net102');
+    Route::get('/subject/ipt101', [SecretPageController::class,'ipt101'])->name('subject/ipt101');
+    Route::get('/subject/sia', [SecretPageController::class,'sia'])->name('subject/sia');
+    Route::get('/subject/ias', [SecretPageController::class,'ias'])->name('subject/ias');
+});
 require __DIR__.'/auth.php';
 
 
