@@ -2,7 +2,7 @@
     <x-slot name="header">
         
         <h2 class="font-semibold text-xl text-black-800 dark:text-black-200 leading-tight">
-            <a href="/exam/courses" class="btn btn-danger">GO BACK</a>{{ __('IAS 101 - FINAL EXAM') }}
+            <a href="/exam/courses" style="position:relative; right: -1140px;" class="btn btn-danger">GO BACK</a>{{ __('IAS 101 - FINAL EXAM') }}
         </h2>
     </x-slot>
 

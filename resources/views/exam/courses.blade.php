@@ -26,27 +26,27 @@
                 <header class="masthead">
                     <div class="py-12">
                         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                            <div class="bg-white dark:bg-gray-800 shadow-sm sm:rounded-lg">
+                            <div style="background-color: rgba(161, 161, 161, 0.61);" class="shadow-sm sm:rounded-lg">
                                 <div class="p-6">
-                                    <p><a href="#" class="btn btn-primary" disabled>BSIT 1A</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="subject/elective2" class="btn btn-outline-primary">Elective 2</a></p>
+                                    <p><a href="#" class="btn btn-primary" disabled>BSIT 1A</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="subject/elective2" style="color: #fff" class="btn btn-outline-primary">Elective 2</a></p>
                                     <br/>
-                                    <p><a href="#" class="btn btn-primary">BSIT 1B</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="subject/elective2" class="btn btn-outline-primary">Elective 2</a></p>
+                                    <p><a href="#" class="btn btn-primary">BSIT 1B</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="subject/elective2" style="color: #fff" class="btn btn-outline-primary">Elective 2</a></p>
                                     <br/>
                                     <p><a href="#" class="btn btn-success">BSIT 2A</a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                                        <a href="subject/ipt101" class="btn btn-outline-success">IPT 101</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="subject/net101" class="btn btn-outline-success">NET 101</a>
+                                        <a href="subject/ipt101" style="color: #fff" class="btn btn-outline-success">IPT 101</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="subject/net101" style="color: #fff" class="btn btn-outline-success">NET 101</a>
                                     </p>
                                     <br/>
                                     <p><a href="#" class="btn btn-success">BSIT 2B</a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                                        <a href="subject/ipt101" class="btn btn-outline-success">IPT 101</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="subject/net101" class="btn btn-outline-success">NET 101</a>
+                                        <a href="subject/ipt101" style="color: #fff" class="btn btn-outline-success">IPT 101</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="subject/net101" style="color: #fff" class="btn btn-outline-success">NET 101</a>
                                     </p>
                                     <br/>
-                                    <p><a href="#" class="btn btn-warning">BSIT 3A</a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                                        <a href="subject/elective4" class="btn btn-outline-warning">ELECTIVE 4</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="subject/ias" class="btn btn-outline-warning">IAS 101</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="subject/net102" class="btn btn-outline-warning">NET 102</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="subject/sia" class="btn btn-outline-warning">SIA 101</a>
+                                    <p><a href="#" style="color: #fff" class="btn btn-warning">BSIT 3A</a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                        <a href="subject/elective4" style="color: #fff" class="btn btn-outline-warning">ELECTIVE 4</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="subject/ias" style="color: #fff" class="btn btn-outline-warning">IAS 101</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="subject/net102" style="color: #fff" class="btn btn-outline-warning">NET 102</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="subject/sia" style="color: #fff" class="btn btn-outline-warning">SIA 101</a>
                                     </p>
                                     <br/>
                                     <p><a href="#" class="btn btn-danger">BSIT 4A</a></p>
