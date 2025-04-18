@@ -27,14 +27,14 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
  
-    Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin/dashboard');
+    Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin/dashboard');
+    Route::get('/users', [AdminController::class, 'index'])->name('admin.users');
+    Route::get('/users/admins', [AdminController::class, 'admins'])->name('admin.users.admins');
+    Route::get('/users/students', [AdminController::class, 'students'])->name('admin.users.students');
 
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
-    Route::post('/admin/products/save', [ProductController::class, 'save'])->name('admin/products/save');
-    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
-    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
-    Route::get('/admin/products/delete/{id}', [ProductController::class, 'delete'])->name('admin/products/delete');
+    Route::get('/users/{user}/edit', [AdminController::class, 'edits'])->name('admin.users.edit');
+    Route::delete('/users/{user}', [AdminController::class, 'destroys'])->name('admin.users.destroy');
+    Route::put('/users/{user}', [AdminController::class, 'updates'])->name('admin.users.update');
     
     Route::get('/questions/create', [AdminQuestionController::class, 'create'])->name('admin/create-question');
     Route::post('/questions', [AdminQuestionController::class, 'store'])->name('admin.questions.store');

@@ -1,17 +1,11 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-black-800 dark:text-black-200 leading-tight">
-            {{ __('Dashboard Admin') }}
-        </h2>
-    </x-slot>
 
     <div class="flex h-screen">
         <!-- Sidebar -->
         <nav class="w-64 bg-gray-800 text-white flex flex-col p-4">
-            <h2 class="text-2xl font-bold mb-6">My App</h2>
+            <h2 class="text-2xl font-bold mb-6">CCS WEB TEST SYSTEM</h2>
     
-            <a href="{{ route('admin/dashboard') }}" class="mb-2 p-2 rounded hover:bg-gray-700">Dashboard</a>
-            <a href="{{ route('admin/products/create') }}" class="hover:bg-gray-700 p-2 rounded">Products</a>
+            <a href="{{ route('admin/dashboard') }}" class="mb-2 p-2 rounded hover:bg-gray-700" style="background-color: rgb(255,50,50);">Dashboard</a>
             <a href="{{ route('admin/create-question') }}" class="hover:bg-gray-700 p-2 rounded">Create Question</a>
             <a href="{{ route('admin.exam-attempts') }}" class="hover:bg-gray-700 p-2 rounded">View Exam Attempt</a>
             <a href="{{ route('logout') }}"
@@ -24,9 +18,38 @@
         </nav>
     
         <!-- Main Content -->
-        <div class="flex-1 p-6 bg-gray-100 overflow-y-auto">
-            @yield('content')
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" style="padding: 50px;">
+            {{-- All Users --}}
+            <a href="{{ route('admin.users') }}" class="p-4 bg-white rounded-xl shadow hover:shadow-lg transition flex items-center gap-4">
+                <i data-lucide="users" class="w-8 h-8 text-blue-500"></i>
+                <div>
+                    <h3 class="text-lg font-bold">Total Users</h3>
+                    <p>{{ $totalUsers }}</p>
+                </div>
+            </a>
+
+            {{-- Admins --}}
+            <a href="{{ route('admin.users.admins') }}" class="p-4 bg-blue-100 rounded-xl shadow hover:shadow-lg transition flex items-center gap-4">
+                <i data-lucide="shield-check" class="w-8 h-8 text-blue-700"></i>
+                <div>
+                    <h3 class="text-lg font-bold">Admins</h3>
+                    <p>{{ $totalAdmins }}</p>
+                </div>
+            </a>
+
+            {{-- Students --}}
+            <a href="{{ route('admin.users.students') }}" class="p-4 bg-green-100 rounded-xl shadow hover:shadow-lg transition flex items-center gap-4">
+                <i data-lucide="graduation-cap" class="w-8 h-8 text-green-700"></i>
+                <div>
+                    <h3 class="text-lg font-bold">Students</h3>
+                    <p>{{ $totalStudents }}</p>
+                </div>
+            </a>
+
+        
+            </div>
         </div>
+
     </div>
     
     

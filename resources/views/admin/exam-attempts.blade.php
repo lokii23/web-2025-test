@@ -1,19 +1,13 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Exam Attempts') }}
-        </h2>
-    </x-slot>
 
     <div class="flex h-screen">
         <!-- Sidebar -->
         <nav class="w-64 bg-gray-800 text-white flex flex-col p-4">
-            <h2 class="text-2xl font-bold mb-6">My App</h2>
+            <h2 class="text-2xl font-bold mb-6">CCS WEB TEST SYSTEM</h2>
     
             <a href="{{ route('admin/dashboard') }}" class="mb-2 p-2 rounded hover:bg-gray-700">Dashboard</a>
-            <a href="{{ route('admin/products/create') }}" class="hover:bg-gray-700 p-2 rounded">Products</a>
             <a href="{{ route('admin/create-question') }}" class="hover:bg-gray-700 p-2 rounded">Create Question</a>
-            <a href="{{ route('admin.exam-attempts') }}" class="hover:bg-gray-700 p-2 rounded">View Exam Attempt</a>
+            <a href="{{ route('admin.exam-attempts') }}" class="hover:bg-gray-700 p-2 rounded" style="background-color: rgb(255,50,50);">View Exam Attempt</a>
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                class="mt-auto p-2 rounded hover:bg-gray-700">Logout</a>
@@ -61,7 +55,7 @@
                                         <td class="px-4 py-2">{{ $attempt->user->name ?? 'Unknown' }}</td>
                                         <td class="px-4 py-2">{{ $attempt->subject }}</td>
                                         <td class="px-4 py-2">{{ $attempt->score }}</td>
-                                        <td class="px-4 py-2">{{ $attempt->created_at->format('Y-m-d H:i') }}</td>
+                                        <td class="px-4 py-2">{{ $attempt->created_at->format('m-d-Y H:i') }}</td>
                                         <td class="px-4 py-2 flex gap-2">
                                             <a href="{{ route('exam-attempts.edit', $attempt->id) }}"
                                                class="btn btn-warning text-black px-3 py-1 rounded">

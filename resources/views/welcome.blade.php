@@ -61,9 +61,9 @@
         <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
         <div class="social-icons">
             <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-                <a class="btn btn-dark m-3" href="https://www.youtube.com/@professionalacademyoftheph1661"><i class="fab fa-youtube"></i></a>
-                <a class="btn btn-dark m-3" href="https://www.facebook.com/PAPSchoolCebu"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-dark m-3" href="https://www.youtube.com/@professionalacademyoftheph1661" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-dark m-3" href="https://www.facebook.com/PAPSchoolCebu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram" target="_blank"></i></a>
             </div>
         </div>
         <!-- Bootstrap core JS-->
