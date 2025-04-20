@@ -48,9 +48,9 @@
                                     <br/>
                                     <p><a href="#" style="color: #fff" class="btn btn-warning">BSIT 3A</a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
                                         <a href="/exam-page/elective4" style="color: #fff" class="btn btn-outline-warning">ELECTIVE 4</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="/exam-page/ias" style="color: #fff" class="btn btn-outline-warning">IAS 101</a>&nbsp;&nbsp;&nbsp;
+                                        <a href="/exam-page/ias101" style="color: #fff" class="btn btn-outline-warning">IAS 101</a>&nbsp;&nbsp;&nbsp;
                                         <a href="/exam-page/net102" style="color: #fff" class="btn btn-outline-warning">NET 102</a>&nbsp;&nbsp;&nbsp;
-                                        <a href="/exam-page/sia" style="color: #fff" class="btn btn-outline-warning">SIA 101</a>
+                                        <a href="/exam-page/sia101" style="color: #fff" class="btn btn-outline-warning">SIA 101</a>
                                     </p>
                                     <br/>
                                     <p><a href="#" class="btn btn-danger">BSIT 4A</a></p>

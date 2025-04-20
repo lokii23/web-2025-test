@@ -54,7 +54,7 @@
     
                                 <!-- Modal -->
                                 <div id="modal-{{ $user->id }}" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                                    <div class="bg-white p-6 rounded shadow-lg max-w-md w-full">
+                                    <div class="bg-white p-6 rounded shadow-lg max-w-md w-68">
                                         <h2 class="text-lg font-semibold mb-4">Delete Confirmation</h2>
                                         <p class="mb-4">Are you sure you want to delete <strong>{{ $user->name }}</strong>?</p>
                                         <form method="POST" action="{{ route('admin.users.destroy', $user->id) }}">

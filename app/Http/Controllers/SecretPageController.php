@@ -29,8 +29,8 @@ class SecretPageController extends Controller
             'net101' => 'net101',
             'net102' => 'net102',
             'ipt101' => 'lebron',
-            'sia' => 'laravel',
-            'ias' => 'frame', // Add more here
+            'sia101' => 'laravel',
+            'ias101' => 'frame', // Add more here
         ];
 
         if (isset($subjectPasswords[$subject]) && $request->password === $subjectPasswords[$subject]) {
